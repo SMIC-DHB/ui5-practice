@@ -4,15 +4,21 @@
 //   alert("UI5 is ready to go!");
 // });
 
-sap.ui.define(["sap/m/Text"], function (Text) {
+// "this is define via Text"
+// sap.ui.define(["sap/m/Text"], function (Text) {
+//   "use strict";
+
+//   new Text({
+//     text: "Hello UI5!",
+//   }).placeAt("content");
+// });
+
+sap.ui.define(["sap/ui/core/mvc/XMLView"], function (XMLView) {
   "use strict";
 
-
-  new Text(
-    {
-      text: 'Hello UI5!'
-    }
-  ).placeAt("content");
-
-  
+  XMLView.create({
+    viewName: "sap.ui.ui5-practice.view.App",
+  }).then(function (oView) {
+    oView.placeAt("content");
+  });
 });
