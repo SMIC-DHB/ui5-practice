@@ -1,7 +1,9 @@
 <mvc:View
-
+    controllerName='sap.ui.ui5-practice.Controller.App'
     xmlns="sap.m"
     xmlns:mvc='sap.ui.core.mvc'>
-    <!-- <Text text='Hello UI5 via XML'> -->
-    <Text text="Hello UI5 via XML"/>
+    <!-- <Text text="Hello UI5 via XML"/> -->
+    <Button
+    text="Say Hi"
+    press=".onShowHello"/>
 </mvc:View>
