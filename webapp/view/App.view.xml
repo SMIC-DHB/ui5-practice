@@ -6,8 +6,15 @@
     <Button
     text="{i18n>showHelloButtonText}"
     press=".onShowHello"/>
-    <Input value="{/recipient/name}"
-           description='Hello {/recipient/name}'
+    <Input value="{oData>/recipient/name}"
+           description='Hello {oData>/recipient/name}'
+           valueLiveUpdate='true'
+           width='60%' />
+    <Button
+    text="{i18n>showNewButtonText}"
+    press=".onShowHello2"/>
+    <Input value="{newModel>/object}"
+           description='Hello {newModel>/object}'
            valueLiveUpdate='true'
            width='60%' />
 </mvc:View>
