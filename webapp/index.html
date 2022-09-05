@@ -8,10 +8,9 @@
 id="sap-ui-bootstrap"
 src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
 data-sap-ui-theme="sap_belize"
-data-sap-ui-libs="sap.m"
 data-sap-ui-compatVersion="edge"
 data-sap-ui-async="true"
-data-sap-ui-onInit="module:sap/ui/ui5-practice/index"
+data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
 data-sap-ui-resourceroots='{
 		"sap.ui.ui5-practice": "./"
 }'>
@@ -23,5 +22,6 @@ data-sap-ui-resourceroots='{
 <body class="sapUIBody">
 	<div id="content"></div>
 	<div id="content_selfstudy"></div>
+	<div data-sap-ui-component data-name="sap.ui.ui5-practice" data-id="container" data-settings='{"id" : "ui5-practice" }'></div>
 </body>
 </html> 

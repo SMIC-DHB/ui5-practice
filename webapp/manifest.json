@@ -5,26 +5,21 @@
 
   "sap.app": {
     "_version": "1.1.0",
-    "id": "<id>",
+    "id": "sap.ui.ui5-practice",
     "type": "application",
-    "i18n": "<i18nPathRelativeToManifest>",
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [""],
+      "fallbackLocale": ""
+    },
     "applicationVersion": {
-      "version": "<version>"
+      "version": "1.0.0"
     },
-    "title": "{{<title>}}",
-    "tags": {
-      "keywords": ["{{<keyword1>}}", "{{<keyword2>}}"]
-    },
-    "dataSources": {
-      "<dataSourceAlias>": {
-        "uri": "<uri>",
-        "settings": {
-          "localUri": "<localUri>"
-        }
-      }
-    }
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}"
   },
   "sap.ui": {
+    "technology": "UI5",
     "_version": "1.1.0",
     "icons": {
       "icon": "<icon>",
@@ -56,33 +51,45 @@
         }
       ]
     },
+    "rootView": {
+      "viewName": "sap.ui.ui5-practice.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
     "dependencies": {
-      "minUI5Version": "<minUI5Version>",
+      "minUI5Version": "1.60",
       "libs": {
-        "<ui5lib1>": {
-          "minVersion": "<minVersion1>"
-        },
-        "<ui5lib2>": {
-          "minVersion": "<minVersion2>"
-        }
-      },
-      "components": {
-        "<ui5component1>": {
-          "minVersion": "<minComp1Version>"
-        }
+        "sap.ui.core": {},
+        "sap.m": {}
       }
     },
     "models": {
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.ui.ui5-practice.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        },
         "uri": "<uriRelativeToManifest>"
       },
+
+      "i18nTest": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.ui.ui5-practice.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        },
+        "uri": "<uriRelativeToManifest>"
+      },
+
       "": {
         "dataSource": "<dataSourceAlias>",
         "settings": {}
       }
     },
-    "rootView": "<rootView>",
     "handleValidation": false,
     "config": {},
     "routing": {},
