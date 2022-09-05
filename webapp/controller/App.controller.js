@@ -8,35 +8,6 @@ sap.ui.define(
   function (Controller, MessageToast, JSONModel, ResourceModel) {
     "use strict";
     return Controller.extend("sap.ui.ui5-practice.App", {
-      onInit: function () {
-        let oData = {
-          recipient: {
-            name: "UI5",
-          },
-        };
-        // let oModel = new JSONModel(oData, oData);
-        // this.getView().setModel(oModel);
-        this.getView().setModel(new JSONModel(oData), "oData");
-
-        let newData = {
-          object: "New Button",
-        };
-        this.getView().setModel(new JSONModel(newData), "newModel");
-        //set i18n model on view
-        let i18nModel = new ResourceModel({
-          bundleName: "sap.ui.ui5-practice.i18n.i18n",
-          supportedLocales: [""],
-          fallbackLocale: "",
-        });
-        this.getView().setModel(i18nModel, "i18n");
-
-        let i18nModelTest = new ResourceModel({
-          bundleName: "sap.ui.ui5-practice.i18n.i18n",
-          supportedLocales: [""],
-          fallbackLocale: "",
-        });
-        this.getView().setModel(i18nModelTest, "i18nTest");
-      },
       onShowHello: function () {
         //read message from i18n model
         let oBundle = this.getView().getModel("i18n").getResourceBundle();
