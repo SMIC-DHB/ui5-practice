@@ -5,34 +5,50 @@
 	displayBlock="true">
     
   <Shell>
-    <App>
+    <App class="myCustomApp">
       <pages>
         <Page title="{i18n>homePageTitle}">
-        <content>
-        <Panel headerText="{i18n>helloPanelTitle}">
-            <content>
-              <Button text="{i18n>showHelloButtonText}" press=".onShowHello" />
-              <Input
+          <content>
+            <Panel headerText="{i18n>helloPanelTitle}"
+                   class="sapUiResponsiveMargin"
+                   width="auto">
+              <content>
+                <Button 
+                text="{i18n>showHelloButtonText}" 
+                press=".onShowHello" 
+                class="myCustomButton"/>
+                <Input
 								value="{oData>/recipient/name}"
 								description='Hello {oData>/recipient/name}'
 								valueLiveUpdate='true'
 								width='60%'
-							/>
-            </content>
-        </Panel>
+						  	/>
+                <FormattedText
+                  htmlText="Hello{oData>/recipient/name}"
+                  class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+              </content>
+           </Panel>
 
-        <Panel headerText="{i18n>otherPanelTitle}">
-          <content>
-            <Button text="{i18n>showNewButtonText}" press=".onShowHello2" />
-            <Input
-								value="{newModel>/object}"
-								description='Hello {newModel>/object}'
-								valueLiveUpdate='true'
-								width='60%'
-							/>  
-          </content>
-        </Panel>
-        </content>
+           <Panel headerText="{i18n>otherPanelTitle}"
+                  class="sapUiResponsiveMargin"
+                  width="auto">
+              <content>
+                <Button 
+                  text="{i18n>showNewButtonText}" 
+                  press=".onShowHello2"
+                  class="sapUiSmallMarginEnd" />
+                <Input
+								   value="{newModel>/object}"
+								   description='Hello {newModel>/object}'
+								   valueLiveUpdate='true'
+								   width='60%'
+						  	/>
+                <Text
+                  text="Hello {newModel>/object}"
+                  class="sapUiSmallMargin" />  
+             </content>
+           </Panel>
+         </content>
         </Page>
       </pages>
     </App>
