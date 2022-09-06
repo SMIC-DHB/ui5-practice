@@ -1,0 +1,24 @@
+<mvc:View
+    controllerName="sap.ui.ui5-practice.controller.OtherPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Panel headerText="{i18n>otherPanelTitle}"
+           class="sapUiResponsiveMargin"
+           width="auto">
+              <content>
+                <Button 
+                  text="{i18n>showNewButtonText}" 
+                  press=".onShowHello2"
+                  class="sapUiSmallMarginEnd myCustomOtherButton" />
+                <Input
+				  value="{newModel>/object}"
+				  description='Hello {newModel>/object}'
+				  valueLiveUpdate='true'
+				  width='60%' />
+                <Text
+                  text="Hello {newModel>/object}"
+                  class="sapUiSmallMargin" />  
+             </content>
+           </Panel>
+</mvc:View>

@@ -10,3 +10,7 @@ html[dir="rtl"] .myCustomApp .myCustomButton.sapMBtn {
 	display: inline-block;
 	font-weight: bold;
 }
+
+.myCustomApp .myCustomOtherButton.sapMBtn {
+	width: auto;
+}
