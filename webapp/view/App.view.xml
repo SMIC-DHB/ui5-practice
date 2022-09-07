@@ -8,6 +8,14 @@
     <App class="myCustomApp">
       <pages>
         <Page title="{i18n>homePageTitle}">
+          <headerContent>
+            <Button
+               icon="sap-icon://hello-world"
+               press=".onOpenDialog"/>
+            <Button
+               icon="sap-icon://add"
+               press=".onOtherOpenDialog"/>
+          </headerContent>
           <content>
             <mvc:XMLView
               viewName="sap.ui.ui5-practice.view.HelloPanel" />
