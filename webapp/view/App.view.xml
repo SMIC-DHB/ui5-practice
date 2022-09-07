@@ -14,11 +14,13 @@
                press=".onOpenDialog"/>
             <Button
                icon="sap-icon://add"
-               press=".onOtherOpenDialog"/>
+               press=".onOpenOtherDialog"/>
           </headerContent>
           <content>
             <mvc:XMLView
               viewName="sap.ui.ui5-practice.view.HelloPanel" />
+            <mvc:XMLView
+              viewName="sap.ui.ui5-practice.view.InvoiceList" />
             <mvc:XMLView
               viewName="sap.ui.ui5-practice.view.OtherPanel" />
          </content>

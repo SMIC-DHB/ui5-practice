@@ -19,6 +19,10 @@ sap.ui.define(
 			onOpenDialog: function () {
 				this.getOwnerComponent().openHelloDialog();
 			},
+
+			onOpenOtherButton: function () {
+				this.getOwnerComponent().openOtherPanelDialog();
+			},
 		});
 	}
 );

@@ -11,7 +11,7 @@
                    id="helloOtherDialogButton"  
                    icon="sap-icon://add"
                    text="{i18n>OtherDialogButton}"
-                   press=".onOtherOpenDialog"
+                   press=".onOpenOtherDialog"
                    class="sapUiSmallMarginEnd" />
                 <Button 
                   text="{i18n>showNewButtonText}" 

@@ -16,29 +16,8 @@ sap.ui.define(
 				MessageToast.show(sMsgTest);
 			},
 
-			onOtherOpenDialog: function () {
+			onOpenOtherDialog: function () {
 				this.getOwnerComponent().openOtherDialog();
-				// let oView = this.getView();
-
-				//create a dialog simply
-				// 	if (!this.byId("helloOtherDialog")) {
-				// 		//load async XML fragment
-				// 		Fragment.load({
-				// 			id: oView.getId(),
-				// 			name: "sap.ui.ui5-practice.Fragment.OtherDialog",
-				// 			controller: this,
-				// 		}).then(function (otherDialog) {
-				// 			// connect the dialog to the root view of the component (models, lifecycle)
-				// 			oView.addDependent(otherDialog);
-				// 			otherDialog.open();
-				// 		});
-				// 	} else {
-				// 		this.byId("helloOtherDialog").open();
-				// 	}
-				// },
-
-				// onCloseDialog: function () {
-				// 	this.byId("helloOtherDialog").close();
 			},
 		});
 	}

@@ -4,7 +4,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 		onOpenDialog: function () {
 			this.getOwnerComponent().openHelloDialog();
 		},
-		onOtherOpenDialog: function () {
+		onOpenOtherDialog: function () {
 			this.getOwnerComponent().openOtherDialog();
 		},
 	});
