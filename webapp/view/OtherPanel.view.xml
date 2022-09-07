@@ -9,6 +9,7 @@
               <content>
                 <Button              
                    id="helloOtherDialogButton"  
+                   icon="sap-icon://add"
                    text="{i18n>OtherDialogButton}"
                    press=".onOtherOpenDialog"
                    class="sapUiSmallMarginEnd" />

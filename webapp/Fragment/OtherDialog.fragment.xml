@@ -6,6 +6,12 @@
         state="Information"
         id="helloOtherDialog"
         title="Hello {newModel>/object}">
+        <content>
+          <core:Icon
+            src="sap-icon://activity-individual"
+            size="8rem"
+            class="sapUiMediumMargin" />
+        </content>
         <Text
           text="{i18n>information}"
           class="sapUiSmallMargin" />  
@@ -17,3 +23,4 @@
         </beginButton>
     </Dialog>
 </core:FragmentDefinition>
+
