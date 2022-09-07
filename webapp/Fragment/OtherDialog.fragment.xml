@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        state="Information"
+        id="helloOtherDialog"
+        title="Hello {newModel>/object}">
+        <Text
+          text="{i18n>information}"
+          class="sapUiSmallMargin" />  
+        <beginButton>
+            <Button
+               type="Reject"
+               text= "{i18n>dialogCloseButtonText}"
+               press= ".onCloseDialog" />
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>

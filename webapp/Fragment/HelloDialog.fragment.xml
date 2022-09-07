@@ -3,8 +3,13 @@
     xmlns:core="sap.ui.core">
 
     <Dialog
+        state="Error"
+        content="Build enterprise-ready web applications, responsive to all devices and running on the browser of your choice. That's OpenUI5."
         id="helloDialog"
         title="Hello {oData>/recipient/name}">
+        <Text
+          text="{i18n>error}"
+          class="sapUiSmallMargin" /> 
         <beginButton>
             <Button
                text= "{i18n>dialogCloseButtonText}"
