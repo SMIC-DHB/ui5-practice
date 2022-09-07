@@ -23,6 +23,8 @@
               viewName="sap.ui.ui5-practice.view.InvoiceList" />
             <mvc:XMLView
               viewName="sap.ui.ui5-practice.view.OtherPanel" />
+            <mvc:XMLView
+              viewName="sap.ui.ui5-practice.view.OtherLists" />
          </content>
         </Page>
       </pages>

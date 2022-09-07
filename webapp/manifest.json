@@ -89,6 +89,11 @@
 				"uri": "Invoices.json"
 			},
 
+			"product": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Products.json"
+			},
+
 			"": {
 				"dataSource": "<dataSourceAlias>",
 				"settings": {}
