@@ -19,7 +19,9 @@
                         showMeasure: false
                     }
                 }"
-                numberUnit="{product>Currency}"/>
+                numberUnit="{= ${product>Currency} !== ' ' ? ${product>Currency} : ${localDefault>/currency}}"
+                numberState="{= ${product>ExtendedPrice} > 50 ? 'Success' : 'Error'}"
+                />
         </items>
     </List>
 </mvc:View>

@@ -15,6 +15,12 @@ sap.ui.define(
 				// 	.getModel("product")
 				// 	.getProperty("/Products/Currency");
 				// console.log(oData);
+				this.getView().setModel(
+					new JSONModel({
+						currency: "USD",
+					}),
+					"localDefault"
+				);
 			},
 		});
 	}
