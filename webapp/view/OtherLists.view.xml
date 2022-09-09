@@ -11,7 +11,8 @@
         items="{
             path: 'product>/Products',
             sorter: {
-                path: 'ProductName'
+                path: 'ProductType',
+                group: true
             }
         }"
         >

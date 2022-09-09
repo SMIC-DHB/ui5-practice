@@ -13,10 +13,11 @@
 			"ProductName": "Mouse",
 			"Quantity": 4,
 			"ExtendedPrice": 9.99999,
-			"ShipperName": "ACME",
+			"ShipperName": "EasyPc",
 			"ShippedDate": "2015-02-18T00:00:00",
 			"Status": "B",
-			"Currency": "PHP"
+			"Currency": "PHP",
+			"ProductType": "Peripherals"
 		},
 		{
 			"ProductName": "Monitor",
@@ -25,7 +26,19 @@
 			"ShipperName": "ACME",
 			"ShippedDate": "2015-03-02T00:00:00",
 			"Status": "B",
-			"Currency": " "
+			"Currency": " ",
+			"ProductType": "Essentials"
+		},
+
+		{
+			"ProductName": "CPU",
+			"Quantity": 3,
+			"ExtendedPrice": 612.85,
+			"ShipperName": "ACME",
+			"ShippedDate": "2015-03-02T00:00:00",
+			"Status": "B",
+			"Currency": " ",
+			"ProductType": "Essentials"
 		}
 	]
 }
