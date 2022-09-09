@@ -20,8 +20,16 @@
                     }
                 }"
                 numberUnit="{= ${product>Currency} !== ' ' ? ${product>Currency} : ${localDefault>/currency}}"
-                numberState="{= ${product>ExtendedPrice} > 50 ? 'Success' : 'Error'}"
-                />
+                numberState="{= ${product>ExtendedPrice} > 50 ? 'Success' : 'Error'}">
+
+                <firstStatus>
+                  <ObjectStatus
+                    text="{
+                        path: 'product>Status',
+                        formatter: '.formatter.statusText'
+                    }" />
+                </firstStatus>
+            </ObjectListItem>
         </items>
     </List>
 </mvc:View>
