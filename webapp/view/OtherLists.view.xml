@@ -8,7 +8,12 @@
         headerText="{i18n>productListTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
-        items="{product>/Products}"
+        items="{
+            path: 'product>/Products',
+            sorter: {
+                path: 'ProductName'
+            }
+        }"
         >
         <headerToolbar>
             <Toolbar>
