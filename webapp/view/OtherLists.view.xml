@@ -4,10 +4,18 @@
     xmlns:mvc="sap.ui.core.mvc">
 
     <List
+        id="productList"
         headerText="{i18n>productListTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
         items="{product>/Products}">
+        <headerToolbar>
+            <Toolbar>
+              <Title text ="{i18n>productListTitle}" />
+              <ToolbarSpacer />
+              <SearchField width="50%" search =".onFilterProducts"/>
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem
                 title="{product>Quantity} x {product>ProductName}" 
