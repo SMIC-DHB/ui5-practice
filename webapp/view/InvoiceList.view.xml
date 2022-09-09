@@ -15,7 +15,8 @@
               <ToolbarSpacer />
               <SearchField 
                 width="50%" 
-                search =".onFilterInvoices" />
+                search =".onFilterInvoices" 
+                liveChange= ".onLiveFilterInvoices"/>
             </Toolbar>
         </headerToolbar>
         <items>

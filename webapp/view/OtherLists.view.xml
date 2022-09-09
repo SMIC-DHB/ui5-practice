@@ -8,12 +8,16 @@
         headerText="{i18n>productListTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
-        items="{product>/Products}">
+        items="{product>/Products}"
+        >
         <headerToolbar>
             <Toolbar>
               <Title text ="{i18n>productListTitle}" />
               <ToolbarSpacer />
-              <SearchField width="50%" search =".onFilterProducts"/>
+              <SearchField 
+                width="50%" 
+                search =".onFilterProducts" 
+                liveChange= ".onLiveFilterOther"/>
             </Toolbar>
         </headerToolbar>
         <items>

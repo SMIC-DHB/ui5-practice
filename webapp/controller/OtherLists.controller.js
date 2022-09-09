@@ -47,6 +47,23 @@ sap.ui.define(
 
 				//let dataInvoices = this.getView().getModel("invoices");
 			},
+
+			onLiveFilterOther: function (aEvent) {
+				let aFilter = [];
+				// let newQuery = newEvent.getParameter("query");
+				let aQuery = aEvent.getSource().getValue();
+
+				if (aQuery) {
+					aFilter.push(
+						new Filter("ProductName", FilterOperator.Contains, aQuery)
+					);
+				}
+
+				//filter binding
+				let aList = this.byId("productList");
+				let aBinding = aList.getBinding("items");
+				aBinding.filter(aFilter);
+			},
 		});
 	}
 );

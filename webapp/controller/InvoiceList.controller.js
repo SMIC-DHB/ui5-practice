@@ -43,40 +43,57 @@ sap.ui.define(
 				//let dataInvoices = this.getView().getModel("invoices");
 			},
 
-			onSuggest: function (event) {
-				let aFilters2 = [];
-				var sValue = event.getParameter("suggestValue");
-				if (sValue) {
-					aFilters2 = [
-						new Filter(
-							[
-								new Filter("ProductName", function (sText) {
-									return (
-										(sText || "").toUpperCase().indexOf(sValue.toUpperCase()) >
-										-1
-									);
-								}),
-								// new Filter("Name", function (sDes) {
-								// 	return (
-								// 		(sDes || "").toUpperCase().indexOf(sValue.toUpperCase()) >
-								// 		-1
-								// 	);
-								// }),
-							],
-							false
-						),
-					];
+			onLiveFilterInvoices: function (aEvent) {
+				let aFilter = [];
+				// let newQuery = newEvent.getParameter("query");
+				let aQuery = aEvent.getSource().getValue();
+
+				if (aQuery) {
+					aFilter.push(
+						new Filter("ProductName", FilterOperator.Contains, aQuery)
+					);
 				}
 
-				console.log(sValue);
-				console.log(aFilters2);
-				let newList = this.byId("invoiceLIst");
-				let newBinding = newList.getBinding("items");
-				newBinding.filter(aFilters2);
-				newList.suggest(aFilters2);
-				// this.oSF.getBinding("invoiceList").filter(aFilters2);
-				// this.oSF.suggest();
+				//filter binding
+				let aList = this.byId("invoiceList");
+				let aBinding = aList.getBinding("items");
+				aBinding.filter(aFilter);
 			},
+
+			// onSuggest: function (event) {
+			// 	let aFilters2 = [];
+			// 	var sValue = event.getParameter("suggestValue");
+			// 	if (sValue) {
+			// 		aFilters2 = [
+			// 			new Filter(
+			// 				[
+			// 					new Filter("ProductName", function (sText) {
+			// 						return (
+			// 							(sText || "").toUpperCase().indexOf(sValue.toUpperCase()) >
+			// 							-1
+			// 						);
+			// 					}),
+			// 					// new Filter("Name", function (sDes) {
+			// 					// 	return (
+			// 					// 		(sDes || "").toUpperCase().indexOf(sValue.toUpperCase()) >
+			// 					// 		-1
+			// 					// 	);
+			// 					// }),
+			// 				],
+			// 				false
+			// 			),
+			// 		];
+			// 	}
+
+			// 	console.log(sValue);
+			// 	console.log(aFilters2);
+			// 	let newList = this.byId("invoiceLIst");
+			// 	let newBinding = newList.getBinding("items");
+			// 	newBinding.filter(aFilters2);
+			// 	newList.suggest(aFilters2);
+			// 	// this.oSF.getBinding("invoiceList").filter(aFilters2);
+			// 	// this.oSF.suggest();
+			// },
 		});
 	}
 );
