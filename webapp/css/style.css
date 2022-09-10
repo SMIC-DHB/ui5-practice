@@ -14,3 +14,11 @@ html[dir="rtl"] .myCustomApp .myCustomButton.sapMBtn {
 .myCustomApp .myCustomOtherButton.sapMBtn {
 	width: auto;
 }
+
+/*  ProductRating */
+.myAppDemoWTProductRating {
+	padding: 0.75rem;
+}
+.myAppDemoWTProductRating .sapMRI {
+	vertical-align: initial;
+}

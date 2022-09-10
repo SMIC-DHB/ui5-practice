@@ -1,7 +1,9 @@
 <mvc:View
     controllerName="sap.ui.ui5-practice.controller.Detail"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:wt="sap.ui.ui5-practice.customcontrol"
+    >
     
     <Page 
         title="{i18n>detailPageTitle}"
@@ -12,5 +14,6 @@
             intro="{invoice>ShipperName}"
             title="{invoice>ProductName}"
             />
+        <wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
     </Page>
 </mvc:View>

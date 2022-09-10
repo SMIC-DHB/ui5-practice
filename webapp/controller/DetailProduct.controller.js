@@ -3,8 +3,9 @@ sap.ui.define(
 		"sap/ui/core/mvc/Controller",
 		"sap/ui/core/UIComponent",
 		"sap/ui/core/routing/History",
+		"sap/m/MessageToast",
 	],
-	function (Controller, UIComponent, History) {
+	function (Controller, UIComponent, History, MessageToast) {
 		"use strict";
 
 		return Controller.extend("sap.ui.ui5-practice.controller.DetailProduct", {
@@ -36,6 +37,16 @@ sap.ui.define(
 					let oRouter = UIComponent.getRouterFor(this);
 					oRouter.navTo("overview", {}, true);
 				}
+			},
+
+			onRatingChange: function (oEvent) {
+				let fValue = oEvent.getParameter("value");
+				MessageToast.show(
+					this.getView()
+						.getModel("i18n")
+						.getResourceBundle()
+						.getText("ratingConfirmation", [fValue])
+				);
 			},
 		});
 	}
