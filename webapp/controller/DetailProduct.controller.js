@@ -1,6 +1,10 @@
 sap.ui.define(
-	["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent"],
-	function (Controller, UIComponent) {
+	[
+		"sap/ui/core/mvc/Controller",
+		"sap/ui/core/UIComponent",
+		"sap/ui/core/routing/History",
+	],
+	function (Controller, UIComponent, History) {
 		"use strict";
 
 		return Controller.extend("sap.ui.ui5-practice.controller.DetailProduct", {
@@ -20,6 +24,18 @@ sap.ui.define(
 						),
 					model: "product",
 				});
+			},
+
+			onNavBack: function (oEvent) {
+				let oHistory = History.getInstance();
+				let sPreviousHash = oHistory.getPreviousHash();
+
+				if (sPreviousHash !== undefined) {
+					window.history.go(-1);
+				} else {
+					let oRouter = UIComponent.getRouterFor(this);
+					oRouter.navTo("overview", {}, true);
+				}
 			},
 		});
 	}
