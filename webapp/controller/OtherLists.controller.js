@@ -64,6 +64,11 @@ sap.ui.define(
 				let aBinding = aList.getBinding("items");
 				aBinding.filter(aFilter);
 			},
+
+			onNavigate: function (oEvent) {
+				let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("product");
+			},
 		});
 	}
 );

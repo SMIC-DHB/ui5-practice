@@ -1,0 +1,26 @@
+<mvc:View
+    controllerName="sap.ui.ui5-practice.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Page title="{i18n>homePageTitle}">
+        <headerContent>
+            <Button
+                icon="sap-icon://hello-world"
+                press=".onOpenDialog"/>
+            <Button
+               icon="sap-icon://add"
+               press=".onOpenOtherDialog"/>
+        </headerContent>
+        <content>
+            <mvc:XMLView 
+                viewName="sap.ui.ui5-practice.view.HelloPanel"/>
+            <mvc:XMLView 
+                viewName="sap.ui.ui5-practice.view.InvoiceList"/>
+            <mvc:XMLView
+                viewName="sap.ui.ui5-practice.view.OtherPanel" />
+            <mvc:XMLView
+                viewName="sap.ui.ui5-practice.view.OtherLists" />
+        </content>
+    </Page>
+</mvc:View>

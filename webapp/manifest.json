@@ -111,7 +111,48 @@
 		},
 		"handleValidation": false,
 		"config": {},
-		"routing": {},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.ui5-practice.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "overview",
+					"target": "overview"
+				},
+				{
+					"pattern": "detail",
+					"name": "detail",
+					"target": "detail"
+				},
+				{
+					"pattern": "product",
+					"name": "product",
+					"target": "product"
+				}
+			],
+			"targets": {
+				"overview": {
+					"viewId": "overview",
+					"viewName": "Overview"
+				},
+				"detail": {
+					"viewId": "detail",
+					"viewName": "Detail"
+				},
+
+				"product": {
+					"viewId": "product",
+					"viewName": "DetailProduct"
+				}
+			}
+		},
 		"extends": {
 			"component": "<extendedComponentId>",
 			"minVersion": "<minComp1Version>",

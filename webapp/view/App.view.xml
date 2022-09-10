@@ -5,28 +5,11 @@
 	displayBlock="true">
     
   <Shell>
-    <App class="myCustomApp">
+    <App 
+      class="myCustomApp"
+      id="app">
       <pages>
-        <Page title="{i18n>homePageTitle}">
-          <headerContent>
-            <Button
-               icon="sap-icon://hello-world"
-               press=".onOpenDialog"/>
-            <Button
-               icon="sap-icon://add"
-               press=".onOpenOtherDialog"/>
-          </headerContent>
-          <content>
-            <mvc:XMLView
-              viewName="sap.ui.ui5-practice.view.HelloPanel" />
-            <mvc:XMLView
-              viewName="sap.ui.ui5-practice.view.InvoiceList" />
-            <mvc:XMLView
-              viewName="sap.ui.ui5-practice.view.OtherPanel" />
-            <mvc:XMLView
-              viewName="sap.ui.ui5-practice.view.OtherLists" />
-         </content>
-        </Page>
+        
       </pages>
     </App>
   </Shell>

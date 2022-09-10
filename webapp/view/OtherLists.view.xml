@@ -38,7 +38,9 @@
                     }
                 }"
                 numberUnit="{= ${product>Currency} !== ' ' ? ${product>Currency} : ${localDefault>/currency}}"
-                numberState="{= ${product>ExtendedPrice} > 50 ? 'Success' : 'Error'}">
+                numberState="{= ${product>ExtendedPrice} > 50 ? 'Success' : 'Error'}"
+                type="Navigation"
+                press="onNavigate">
 
                 <firstStatus>
                   <ObjectStatus

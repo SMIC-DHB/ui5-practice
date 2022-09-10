@@ -60,6 +60,11 @@ sap.ui.define(
 				aBinding.filter(aFilter);
 			},
 
+			onPress: function (oEvent) {
+				let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("detail");
+			},
+
 			// onSuggest: function (event) {
 			// 	let aFilters2 = [];
 			// 	var sValue = event.getParameter("suggestValue");
