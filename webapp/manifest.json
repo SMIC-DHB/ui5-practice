@@ -127,12 +127,12 @@
 					"target": "overview"
 				},
 				{
-					"pattern": "detail",
+					"pattern": "detail/{invoicePath}",
 					"name": "detail",
 					"target": "detail"
 				},
 				{
-					"pattern": "product",
+					"pattern": "product/{productPath}",
 					"name": "product",
 					"target": "product"
 				}

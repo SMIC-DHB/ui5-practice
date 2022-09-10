@@ -66,8 +66,13 @@ sap.ui.define(
 			},
 
 			onNavigate: function (oEvent) {
+				let oItem = oEvent.getSource();
 				let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("product");
+				oRouter.navTo("product", {
+					productPath: window.encodeURIComponent(
+						oItem.getBindingContext("product").getPath().substr(1)
+					),
+				});
 			},
 		});
 	}
