@@ -4,8 +4,23 @@ sap.ui.define(
 		"sap/ui/core/UIComponent",
 		"sap/ui/core/routing/History",
 		"sap/m/MessageToast",
+		"sap/m/Dialog",
+		"sap/m/library",
+		"sap/m/Text",
+		"sap/ui/core/library",
+		"sap/m/Button",
 	],
-	function (Controller, UIComponent, History, MessageToast) {
+	function (
+		Controller,
+		UIComponent,
+		History,
+		MessageToast,
+		Dialog,
+		mobileLibrary,
+		Text,
+		coreLibrary,
+		Button
+	) {
 		"use strict";
 
 		return Controller.extend("sap.ui.ui5-practice.controller.Detail", {
@@ -41,21 +56,19 @@ sap.ui.define(
 			},
 
 			onRatingChange: function (oEvent) {
-				let fValue = oEvent.getParameter("value");
-				let oResourceBundle = this.getView()
-					.getModel("i18n")
-					.getResourceBundle();
-
-				MessageToast.show(
-					oResourceBundle.getText("ratingConfirmation", [fValue])
-				);
-
+				// let fValue = oEvent.getParameter("value");
+				// let oResourceBundle = this.getView()
+				// 	.getModel("i18n")
+				// 	.getResourceBundle();
 				// MessageToast.show(
-				// 	this.getView()
-				// 		.getModel("i18n")
-				// 		.getResourceBundle()
-				// 		.getText("ratingConfirmation", [oEvent.getParameter("value")])
+				// 	oResourceBundle.getText("ratingConfirmation", [fValue])
 				// );
+				MessageToast.show(
+					this.getView()
+						.getModel("i18n")
+						.getResourceBundle()
+						.getText("ratingConfirmation", [oEvent.getParameter("value")])
+				);
 			},
 		});
 	}
