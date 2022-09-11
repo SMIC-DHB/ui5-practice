@@ -61,12 +61,12 @@
                 <cells>
                     <ObjectNumber number="{product>Quantity}" emphasized="false"/>
                     <ObjectIdentifier title="{product>ProductName}"/>
-                    <Text 
+                    <ObjectStatus
                         text="{
                           path: 'product>Status',
                           formatter: '.formatter.statusText'
                          }" 
-                        state="{= ${product>Status} == 'A' ? 'Success' : 'Error'}"
+                        state="{= ${product>Status} === 'A' ? 'Success' : 'Error'}"
                         />
                     <Text text="{product>ShipperName}" />
                     <ObjectNumber

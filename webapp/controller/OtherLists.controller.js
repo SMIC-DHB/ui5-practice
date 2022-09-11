@@ -3,14 +3,23 @@ sap.ui.define(
 		"sap/ui/core/mvc/Controller",
 		"sap/ui/model/json/JSONModel",
 		"../model/formatter",
+		"../model/formatterState",
 		"sap/ui/model/Filter",
 		"sap/ui/model/FilterOperator",
 	],
-	function (Controller, JSONModel, formatter, Filter, FilterOperator) {
+	function (
+		Controller,
+		JSONModel,
+		formatter,
+		Filter,
+		FilterOperator,
+		formatterState
+	) {
 		"use strict";
 
 		return Controller.extend("sap.ui.ui5-practice.controller.OtherLists", {
 			formatter: formatter,
+			// formatterState: formatterState,
 			onInit: function () {
 				// this.getView().setModel(
 				// 	new JSONModel({
